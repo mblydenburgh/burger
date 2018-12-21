@@ -1,0 +1,1 @@
+module.export = process.env.DB_PASS;
