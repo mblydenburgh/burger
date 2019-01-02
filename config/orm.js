@@ -1,7 +1,11 @@
+const connection = require('./connection.js');
 
 const orm = {
-    selectAll: function(){
+    selectAll: async function(tableName){
+        const sql = `SELECT * FROM ??`;
+        const data = await connection.query(sql,tableName);
         console.log(`in select all`);
+        console.log(data);
     },
 
     insertOne: function(){
