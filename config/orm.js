@@ -4,12 +4,9 @@ const orm = {
     selectAll: async function(tableName){
         console.log(`in selectAll`);
         const connection = await Connection;
-        const data = await connection.query(`SELECT * FROM burgers`);
-        console.log(data);
-        // console.log(`selecting all from ${tableName}`);
-        // const sql = `SELECT * FROM burgers`;
-        // const data = await connection.connectDB();
-        // console.log(`in select all`);
+        const sql = `SELECT * FROM burgers`;
+        const data = await connection.query(sql,tableName);
+        return data;
         // console.log(data);
     },
 
