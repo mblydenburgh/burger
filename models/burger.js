@@ -1,7 +1,10 @@
 const orm = require('../config/orm');
 
 const burger = {
-    selectBurgers: () => orm.selectAll().then(console.log(`burgers`)),
+    selectBurgers: async function(){
+        orm.selectAll('burgers');
+        
+    },
     insertBurger: () => orm.insertOne(),
     updateBurger: () => orm.updateOne()
 };

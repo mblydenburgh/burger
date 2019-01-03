@@ -1,11 +1,16 @@
-const connection = require('./connection.js');
+const Connection = require('./connection.js');
 
 const orm = {
     selectAll: async function(tableName){
-        const sql = `SELECT * FROM ??`;
-        const data = await connection.query(sql,tableName);
-        console.log(`in select all`);
+        console.log(`in selectAll`);
+        const connection = await Connection;
+        const data = await connection.query(`SELECT * FROM burgers`);
         console.log(data);
+        // console.log(`selecting all from ${tableName}`);
+        // const sql = `SELECT * FROM burgers`;
+        // const data = await connection.connectDB();
+        // console.log(`in select all`);
+        // console.log(data);
     },
 
     insertOne: function(){

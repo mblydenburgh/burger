@@ -13,12 +13,16 @@ const dbPass = process.env.DB_PASS;
 // password:''
 // database:'c9'
 //
-
-const connection = mysql.createConnection({
+async function connectDB(){
+    const connection = await mysql.createConnection({
     host:'127.0.0.1',
     user: 'mblydenburgh',
     password: '',
-    database:'c9'
+    database:'burger_db'
 });
 
-module.exports = connection;
+return connection;
+}
+
+
+module.exports = connectDB();
