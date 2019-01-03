@@ -5,9 +5,9 @@ const router = express.Router();
 
 router.get("/", async function(req,res){
     console.log(`serving index`);
-    let burgers = await burger.selectBurgers();
-    console.log(burgers);
-   res.render("index"); 
+    let data = await burger.selectBurgers();
+    console.log(data);
+   res.render("index", {burgers:data}); 
 });
 
 module.exports = router;
