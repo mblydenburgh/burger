@@ -18,4 +18,12 @@ router.post("/", async function(req,res){
    res.redirect('/');
 });
 
+router.put("/api/:id", async function(req,res){
+   console.log(`deleting at id:${req.params.id}`);
+   const id = req.params.id;
+   let data = await burger.updateBurger(id);
+   console.log(data);
+   res.redirect('/');
+});
+
 module.exports = router;

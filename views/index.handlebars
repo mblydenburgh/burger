@@ -14,6 +14,9 @@
     {{#each burgers}}
     {{#unless eaten}}
         <li>{{ burger }}</li>
+        <form action="/api/{{id}}" method="put">
+            <button type='submit' data-id={{id}}>Eat Me</button>
+        </form>
     {{/unless}}
     {{/each}}
 </ul>

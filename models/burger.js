@@ -8,7 +8,9 @@ const burger = {
     insertBurger: async function(newBurger){
         return await orm.insertOne('burgers','burger',newBurger);
     },
-    updateBurger: () => orm.updateOne()
+    updateBurger: async function(id){
+        return await orm.updateOne('burgers','burger','id',id);
+    }
 };
 
 module.exports = burger;

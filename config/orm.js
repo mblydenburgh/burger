@@ -19,8 +19,12 @@ const orm = {
         return data;
     },
 
-    updateOne: function(){
-        console.log(`in updateOne`);
+    updateOne: async function(tableName,colName,param,value){
+        console.log(`in deleteOne`);
+        const connection = await Connection;
+        const sql = `UPDATE ?? SET ?? = true WHERE ? = ?`
+        const values = [tableName,colName,param,value];
+        console.log(`values: ${values}`);
     }
 };
 
