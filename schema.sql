@@ -11,4 +11,4 @@ CREATE TABLE burgers (
 );
 
 INSERT INTO burgers (burger,eaten)
-VALUES ("BBQ Burger",false), ("Bacon Cheese Burger",false), ("Southwestern Burger",false);
+VALUES ("BBQ Burger",false), ("Bacon Cheese Burger",false), ("Southwestern Burger",false), ("Happy-Meal",true);

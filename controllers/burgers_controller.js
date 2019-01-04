@@ -10,4 +10,12 @@ router.get("/", async function(req,res){
    res.render("index", {burgers:data}); 
 });
 
+router.post("/", async function(req,res){
+   console.log(`posting data: ${req.body.name}`);
+   const newBurger = req.body.name;
+   let data = await burger.insertBurger(newBurger);
+   console.log(data);
+   res.redirect('/');
+});
+
 module.exports = router;

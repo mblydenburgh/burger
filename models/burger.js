@@ -5,7 +5,9 @@ const burger = {
         return await orm.selectAll('burgers');
         
     },
-    insertBurger: () => orm.insertOne(),
+    insertBurger: async function(newBurger){
+        return await orm.insertOne('burgers','burger',newBurger);
+    },
     updateBurger: () => orm.updateOne()
 };
 
