@@ -9,7 +9,7 @@ const burger = {
         return await orm.insertOne('burgers','burger',newBurger);
     },
     updateBurger: async function(id){
-        return await orm.updateOne('burgers','burger','id',id);
+        return await orm.updateOne('burgers','eaten',true,'id',id);
     }
 };
 

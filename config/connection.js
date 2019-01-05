@@ -16,8 +16,8 @@ const dbPass = process.env.DB_PASS;
 async function connectDB(){
     const connection = await mysql.createConnection({
     host:'127.0.0.1',
-    user: 'mblydenburgh',
-    password: '',
+    user: 'root',
+    password: '#SadieMombo1114',
     database:'burger_db'
 });
 
