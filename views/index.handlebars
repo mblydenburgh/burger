@@ -14,7 +14,7 @@
     {{#each burgers}}
     {{#unless eaten}}
         <li>{{ burger }}</li>
-            <button class="eat-button" data-id={{id}}>Eat Me</button>
+        <button class="eat-button" data-id={{id}}>Eat Me</button>
     {{/unless}}
     {{/each}}
 </ul>
@@ -24,6 +24,7 @@
     {{#each burgers}}
     {{#if eaten}}
         <li>{{ burger }}</li>
+        <button class="delete-button" data-id={{id}}>Composte</button>
     {{/if}}
     {{/each}}
 </ul>

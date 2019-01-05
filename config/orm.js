@@ -27,6 +27,16 @@ const orm = {
         console.log(`values: ${values}`);
         const data = await connection.query(sql,values);
         return data;
+    },
+
+    deleteOne: async function(tableName,colName,value){
+        console.log(`in deleteOne`);
+        const connection = await Connection;
+        const sql = `DELETE FROM ?? WHERE ?? = ?`;
+        const values = [tableName,colName,value];
+        console.log(`values: ${values}`);
+        const data = await connection.query(sql,values);
+        return data;
     }
 };
 

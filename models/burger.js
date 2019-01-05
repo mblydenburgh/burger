@@ -10,6 +10,9 @@ const burger = {
     },
     updateBurger: async function(id){
         return await orm.updateOne('burgers','eaten',true,'id',id);
+    },
+    deleteBurger: async function(id){
+        return await orm.deleteOne('burgers','id',id);
     }
 };
 
