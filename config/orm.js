@@ -9,11 +9,11 @@ const orm = {
         return data;
     },
 
-    insertOne: async function(tableName,colName,value){
+    insertOne: async function(tableName,colName,col2Name,value,value2){
         console.log(`in insert one`);
         const connection = await Connection;
         const sql = `INSERT INTO ?? (??,??) VALUES (?,?)`;
-        const values = [tableName,colName,'eaten',value,false];
+        const values = [tableName,colName,col2Name,value,value2];
         console.log(`values: ${values}`);
         const data = await connection.query(sql,values);
         return data;

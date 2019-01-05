@@ -5,7 +5,7 @@
 Homebrew ORM calls to MySQL database through server rendered app powered by Handlebars and Express.
 
 App/ORM supports the following queries:
-1.`selectAll()`
-2.`insertOne()`
-3.`updateOne()`
-4.`deleteOne()`
+1. `selectAll(tableName)`
+2. `insertOne(tableName,colName,col2Name,value,value2)`
+3. `updateOne(tableName,colName,updatedValue,param,location)`
+4. `deleteOne(tableName,colName,value)`

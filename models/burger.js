@@ -6,7 +6,7 @@ const burger = {
         
     },
     insertBurger: async function(newBurger){
-        return await orm.insertOne('burgers','burger',newBurger);
+        return await orm.insertOne('burgers','burger','eaten',newBurger,false);
     },
     updateBurger: async function(id){
         return await orm.updateOne('burgers','eaten',true,'id',id);
