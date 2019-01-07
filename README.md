@@ -12,3 +12,5 @@ App/ORM supports the following queries:
 
 ## Installation
 To run, first run `npm install` from the terminal to install packages. Then, to setup the database and to populate the initial datset, run the `schema.sql`.
+
+![app-preview](./public/assets/images/preview.jpg)
