@@ -3,6 +3,8 @@ require('dotenv').config();
 require ('./keys');
 const dbPass = process.env.DB_PASS;
 
+
+
 // for local dev:
 // user:'root'
 // password:'#SadieMombo1114'
@@ -14,15 +16,21 @@ const dbPass = process.env.DB_PASS;
 // database:'c9'
 //
 async function connectDB(){
-    const connection = await mysql.createConnection({
-    host:'127.0.0.1',
-    user: 'root',
-    password: '#SadieMombo1114',
-    database:'burger_db'
-});
+    let connection;
 
-return connection;
+    if(process.env.JAWSDB_URL){
+        connection = await mysql.createConnection(process.env.JAWSDB_URL)
+    }
+    else{
+        connection = await mysql.createConnection({
+        host:'127.0.0.1',
+        user: 'root',
+        password: '#SadieMombo1114',
+        database:'burger_db'
+        });
+
+    }
+    return connection;
 }
-
 
 module.exports = connectDB();
